@@ -8,10 +8,26 @@ import ru.yandex.practicum.contacts.model.ContactType;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-public class MainUiState {
+class MainUiState {
 
-    public boolean searchVisibility = false;
-    public boolean resetSearchButtonVisibility = false;
+    private boolean searchVisibility = false;
+    private boolean resetSearchButtonVisibility = false;
+
+    public void setSearchVisibility(boolean searchVisibility) {
+        this.searchVisibility = searchVisibility;
+    }
+
+    public void setResetSearchButtonVisibility(boolean resetSearchButtonVisibility) {
+        this.resetSearchButtonVisibility = resetSearchButtonVisibility;
+    }
+
+    public boolean isSearchVisibility() {
+        return searchVisibility;
+    }
+
+    public boolean isResetSearchButtonVisibility() {
+        return resetSearchButtonVisibility;
+    }
 
     public Actions actions = new Actions();
     public MenuBadges menuBadges = new MenuBadges();

@@ -75,7 +75,7 @@ public class FilterContactTypeViewModel extends BaseBottomSheetViewModel {
     }
 
     private void updateUiState() {
-        uiState.isApplyEnable = !defaultFilterContactTypes.equals(selectedFilterContactTypes) && !selectedFilterContactTypes.isEmpty();
+        uiState.setApplyEnable(!defaultFilterContactTypes.equals(selectedFilterContactTypes) && !selectedFilterContactTypes.isEmpty());
         uiStateLiveDate.setValue(uiState);
     }
 
